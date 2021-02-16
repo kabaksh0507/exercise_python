@@ -1,3 +1,7 @@
+"""
+This module is plot sample.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -10,4 +14,3 @@ y = np.sin(x)
 plt.plot(x, y)
 # グラフ表示
 plt.show()
-
