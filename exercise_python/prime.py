@@ -4,6 +4,7 @@ This module contains sample functions for prime numbers.
 
 import math
 
+
 def is_prime(number: int) -> bool:
     """
     This function checks whether a given number is prime or composite.
@@ -13,11 +14,11 @@ def is_prime(number: int) -> bool:
     [True, True, False, True, False, True, False, False]
     """
     if number == 1:
-        print(str(number)+ ' is 1.')
+        print(str(number) + " is 1.")
         return False
     for elem in range(2, int(math.sqrt(number)) + 1):
         if number % elem == 0:
-            print(str(number)+ ' is coposite.')
+            print(str(number) + " is coposite.")
             return False
-    print(str(number)+ ' is PRIME!!')
+    print(str(number) + " is PRIME!!")
     return True
