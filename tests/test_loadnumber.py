@@ -9,7 +9,7 @@ from exercise_python.loadnumber import load_numbers_sorted, fibonacci
 
 
 @pytest.fixture
-def txt() -> str:
+def _txt() -> str:
     """
     Create input file before test and delete it's file after test.
     """
@@ -22,18 +22,18 @@ def txt() -> str:
 
 
 @pytest.fixture
-def txt_and_list(txt) -> tuple[str, List[int]]:
+def _txt_and_list(_txt) -> tuple[str, List[int]]:
     """
     Create input data and output data.
     """
-    yield txt, [1, 2, 3, 4, 5]
+    yield _txt, [1, 2, 3, 4, 5]
 
 
-def test_load_numbers_sorted(txt_and_list):
+def test_load_numbers_sorted(_txt_and_list):
     """
     Test target module 'load_numbers_sorted'.
     """
-    assert load_numbers_sorted(txt_and_list[0]) == txt_and_list[1]
+    assert load_numbers_sorted(_txt_and_list[0]) == _txt_and_list[1]
 
 
 def test_fiboacci(capsys):
