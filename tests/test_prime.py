@@ -22,7 +22,7 @@ from exercise_python.prime import is_prime
         (11, True),
         (12, False),
         (2357, True),
-        (2348, False),
+        (2358, False),
     ],
 )
 def test_is_prime(number, expected):
